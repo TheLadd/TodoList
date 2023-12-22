@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import TodoList from './TodoList'
 import {v4 as uuidv4} from 'uuid'
+import './App.css'
 
 /*
 
@@ -58,11 +59,19 @@ function App() {
 
   return (
     <>
-      <TodoList tasks={tasks} taskToggle={taskToggle}/>
-      <input ref={todoNameRef} type='text' />
-      <button onClick={handleAddTask}>Add Task</button>
-      <button onClick={handleClearTasks}>Clear Completed Tasks</button>
-      <div>Remaining Tasks: {tasks.filter(task => !task.completed).length}</div>
+      <header>
+        <div>
+          Todo List
+        </div>
+      </header>
+      <main>
+        <input ref={todoNameRef} type='text' />
+        <button onClick={handleAddTask} className='addButton'>Add Task</button>
+        <TodoList tasks={tasks} taskToggle={taskToggle}  />
+        <button onClick={handleClearTasks} className='clearButton'>Clear Completed Tasks</button>
+        <div>Remaining Tasks: {tasks.filter(task => !task.completed).length}</div>
+      </main>
+      <footer></footer>
     </>
   );
 }

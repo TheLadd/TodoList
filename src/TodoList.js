@@ -5,8 +5,10 @@ import Task from './Task'
     // Note that this has to be in curly braces for some reason
 export default function TodoList({ tasks, taskToggle }) {
     return (
-        tasks.map(task => {
-            return <Task key={task.id} task={task} taskToggle={taskToggle}/>
-        })
+        <div className='list'>{
+            tasks.map(task => {
+                return <Task key={task.id} task={task} taskToggle={taskToggle}/>
+            })
+        }</div>
     )
 }

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+:root {
+    --darkaqua: #264143;
+    --hotpink: #DE5499;
+    --pink: #BC5499; 
+    --skin: #EDDCD9;
+    --white: #F8F8F8;
+}
+
+* {
+    font-family: Raleway;
+    padding: 0;
+}
+
+
+body {
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+
+    height: 100px;
+    width: 100%;
+    background-color: var(--white);
+    padding: 0;
+    
+    display: flex;
+}
+
+header div {
+    margin: auto;
+}
+
+main {
+    height: 400px;
+    background-color: var(--skin);
+    padding: 50px;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: var(--darkaqua);
+}
+
+button {
+    background-color: var(--skin);
+    border-style: solid;
+    border-color: var(--hotpink);
+    color: var(--hotpink);
+    height: 40px;
+}
+
+button:hover {
+    transition: 0.3s;
+    background-color: var(--pink);
+}
+
+button.addButton {
+    width: 80px;
+}
+
+button.clearButton {
+    width: 180px;
+}
+
+.list {
+    height: 100px;
+    background-color: var(--skin);
+}
+
+.task {
+    width: 30%;
+    margin: 5px;
+    padding: 10px;
+    background-color: var(--dark);
+    display: flex;
+}
+
+.task div {
+    margin-left: 2%;
+}
