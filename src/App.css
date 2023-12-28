@@ -3,7 +3,7 @@
 :root {
     --darkaqua: #264143;
     --hotpink: #DE5499;
-    --pink: #BC5499; 
+    --pink: #DCA4C9; 
     --skin: #EDDCD9;
     --white: #F8F8F8;
 }
@@ -21,12 +21,10 @@ body {
 header {
     position: sticky;
     top: 0px;
-
     height: 100px;
     width: 100%;
     background-color: var(--white);
     padding: 0;
-    
     display: flex;
 }
 
@@ -35,15 +33,29 @@ header div {
 }
 
 main {
-    height: 400px;
+    height: 500px;
     background-color: var(--skin);
-    padding: 50px;
+    padding: 20px;
 }
 
 footer {
     height: 100px;
     width: 100%;
     background-color: var(--darkaqua);
+    display: flex;
+    justify-content: space-between;
+    color: white
+}
+
+
+footer div:first-child {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+footer div:last-child {
+    padding: 40px;
 }
 
 button {
@@ -67,9 +79,25 @@ button.clearButton {
     width: 180px;
 }
 
+.taskInput {
+    display: flex;
+    justify-content:flex-start;
+    margin: 20px;
+}
+
+.taskInput input:first-child {
+    margin-right: 20px;
+}
+
+
 .list {
-    height: 100px;
-    background-color: var(--skin);
+    height: 230px;
+    margin: 40px;
+    padding: 30px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .task {
@@ -82,4 +110,14 @@ button.clearButton {
 
 .task div {
     margin-left: 2%;
+}
+
+.taskFin {
+    display: flex;
+    align-content: center;
+}
+
+.taskFin div {
+    padding: 10px;
+    margin-right: 10px;
 }

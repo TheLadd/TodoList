@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import TodoList from './TodoList'
 import {v4 as uuidv4} from 'uuid'
 import './App.css'
+import github from './github.png'
 
 /*
 
@@ -65,13 +66,25 @@ function App() {
         </div>
       </header>
       <main>
-        <input ref={todoNameRef} type='text' />
-        <button onClick={handleAddTask} className='addButton'>Add Task</button>
+        <div className='taskInput'>
+          <input ref={todoNameRef} type='text' />
+          <button onClick={handleAddTask} className='addButton'>Add Task</button>
+        </div>
         <TodoList tasks={tasks} taskToggle={taskToggle}  />
-        <button onClick={handleClearTasks} className='clearButton'>Clear Completed Tasks</button>
-        <div>Remaining Tasks: {tasks.filter(task => !task.completed).length}</div>
+        <div className='taskFin'>
+          <div>Remaining Tasks: {tasks.filter(task => !task.completed).length}</div>
+          <button onClick={handleClearTasks} className='clearButton'>Clear Completed Tasks</button>
+        </div>
       </main>
-      <footer></footer>
+      <footer>
+        <div>
+          <div>Owen Ribera</div>
+          <a href='https://github.com/TheLadd'><img src={github} width='42' height='42'></img></a>
+        </div>
+        <div>
+          2023
+        </div>
+      </footer>
     </>
   );
 }
