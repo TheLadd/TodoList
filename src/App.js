@@ -7,7 +7,11 @@ import github from './github.png'
 /*
 
   useState: hook that allows us to implement state into our React project
+    * returns a state variable and a state set function
   useRef: hook that allows use to Ref(erence) our HTML elements
+    * a Ref object created w/ this function must be listed in the 'ref' field of whatever HTML element associated
+  useEffect: hook that essentially sets an event handler that runs a function (argument 1) when any dependencies (argument 2) are updated 
+    * it might be the case that only state variables are valid dependencies
 
 */
 
@@ -79,7 +83,7 @@ function App() {
       <footer>
         <div>
           <div>Owen Ribera</div>
-          <a href='https://github.com/TheLadd'><img src={github} width='42' height='42'></img></a>
+          <a href='https://github.com/TheLadd'><img src={github} width='42' height='42'/></a>
         </div>
         <div>
           2023

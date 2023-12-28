@@ -54,6 +54,11 @@ footer div:first-child {
     padding: 20px;
 }
 
+footer div img:hover {
+    filter: brightness(50%);
+    transition: 0.3s;
+}
+
 footer div:last-child {
     padding: 40px;
 }
