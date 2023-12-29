@@ -3,6 +3,7 @@ import TodoList from './TodoList'
 import {v4 as uuidv4} from 'uuid'
 import './App.css'
 import github from './github.png'
+import hamburger from './hamburger-icon.png'
 
 /*
 
@@ -62,13 +63,31 @@ function App() {
     setTasks(newTasks)
   }
 
+  function hamburgerToggle() {
+    let ham = document.getElementsByTagName('nav')[0]
+    if (ham.style.display == 'none') {
+      ham.style.display = 'block'
+    }
+    else {
+      ham.style.display = 'none'
+    }
+  }
+
   return (
     <>
       <header>
         <div>
           Todo List
         </div>
+        <div onClick={hamburgerToggle}>
+          <img src={hamburger} height='60' width='60'/>
+        </div>
       </header>
+      <nav>
+        <div>Placeholder</div>
+        <div>Placeholder</div>
+        <div>Placeholder</div>
+      </nav>
       <main>
         <div className='taskInput'>
           <input ref={todoNameRef} type='text' />
